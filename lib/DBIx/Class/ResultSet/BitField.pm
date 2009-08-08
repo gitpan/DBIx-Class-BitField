@@ -1,4 +1,6 @@
 package DBIx::Class::ResultSet::BitField;
+our $VERSION = '0.10';
+
 
 use strict;
 use warnings;
@@ -68,3 +70,31 @@ sub update {
 }
 
 1;
+
+__END__
+
+=pod
+
+=head1 NAME
+
+DBIx::Class::ResultSet::BitField
+
+=head1 VERSION
+
+version 0.10
+
+=head1 AUTHOR
+
+  Moritz Onken <onken@netcubed.de>
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is Copyright (c) 2009 by Moritz Onken.
+
+This is free software, licensed under:
+
+  The MIT (X11) License
+
+=cut 
+
+

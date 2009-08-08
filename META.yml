@@ -2,26 +2,17 @@
 abstract: 'Store multiple boolean fields in one integer field'
 author:
   - 'Moritz Onken <onken@netcubed.de>'
-build_requires:
-  DBD::SQLite: 0
-  ExtUtils::MakeMaker: 6.42
-  Test::More: 0.42
-configure_requires:
-  ExtUtils::MakeMaker: 6.42
-distribution_type: module
-generated_by: 'Module::Install version 0.86'
-license: perl
+generated_by: 'Dist::Zilla::Plugin::MetaYAML version 1.092071'
+license: mit
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: 1.4
 name: DBIx-Class-BitField
-no_index:
-  directory:
-    - inc
-    - t
 requires:
-  DBIx::Class: 0.08102
+  DBD::SQLite: 0
+  DBIx::Class: 0.08107
+  SQL::Translator: 0.09003
+  Test::More: 0.42
 resources:
-  license: http://dev.perl.org/licenses/
-  repository: http://github.com/monken/DBIx-Class-BitField/tree/master
-version: 0.00_01
+  repository: http://github.com/monken/DBIx-Class-BitField/tree
+version: 0.10
