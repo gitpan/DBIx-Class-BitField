@@ -3,7 +3,7 @@ NAME
     field
 
 VERSION
-    version 0.10
+    version 0.11
 
 SYNOPSIS
       package MySchema::Item;
@@ -100,7 +100,7 @@ DESCRIPTION
           # $row->status == ['active']
 
     "$row->_status"
-        This accessor will hold the internal integer representation if the
+        This accessor will hold the internal integer representation of the
         bit field.
 
           $row->status(['active', 'inactive']);
@@ -126,8 +126,8 @@ DESCRIPTION
    update
       $rs->update({ status => ['active'] });
 
-    This will update the status of all items in the result set to "active".
-    This will create a single SQL query only.
+    This will update the status of all items in the result to "active". This
+    is done in a single SQL query.
 
    search_bitfield
     To search a result set for a specific value of the bitfield use

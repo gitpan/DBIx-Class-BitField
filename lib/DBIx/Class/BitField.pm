@@ -7,7 +7,7 @@ use Carp;
 
 use base 'DBIx::Class';
 
-our $VERSION = '0.10';
+our $VERSION = '0.11';
 
 sub register_column {
   my ($self, $column, $info, @rest) = @_;
@@ -137,7 +137,7 @@ DBIx::Class::BitField - Store multiple boolean fields in one integer field
 
 =head1 VERSION
 
-version 0.10
+version 0.11
 
 =head1 SYNOPSIS
 
@@ -237,7 +237,7 @@ These accessors return either C<1> or C<0>. If you add a parameter they will act
 
 =item C<< $row->_status >>
 
-This accessor will hold the internal integer representation if the bit field.
+This accessor will hold the internal integer representation of the bit field.
 
   $row->status(['active', 'inactive']);
   # $row->_status == 3
@@ -264,7 +264,7 @@ C<DBIx::Class::ResultSet::BitField> or to a class which inherits from it.
 
   $rs->update({ status => ['active'] });
 
-This will update the status of all items in the result set to C<active>. This will create a single SQL query only.
+This will update the status of all items in the result to C<active>. This is done in a single SQL query.
 
 =head3 search_bitfield
 
