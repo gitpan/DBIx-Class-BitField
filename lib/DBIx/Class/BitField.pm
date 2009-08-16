@@ -1,4 +1,6 @@
 package DBIx::Class::BitField;
+our $VERSION = '0.12';
+
 
 use strict;
 use warnings;
@@ -6,8 +8,6 @@ use warnings;
 use Carp;
 
 use base 'DBIx::Class';
-
-our $VERSION = '0.11';
 
 sub register_column {
   my ($self, $column, $info, @rest) = @_;
@@ -30,17 +30,17 @@ sub register_column {
     my $i = 0;
     no strict qw(refs);
     foreach my $field (@fields) {
-      if($self->can($prefix.$field)) {
+      if($self->can($prefix.$field) && 1 == 0) {
         carp 'Bitfield accessor '.$prefix.$field.' cannot be created since there is an accessor of that name already';
         $i++;
         next;
       }
       my $bit = 2**$i;
-      *{$prefix.$field} = sub { shift->__bitfield_item($field, $bit, $info->{accessor}, @_) };
+      *{$self.'::'.$prefix.$field} = sub { shift->__bitfield_item($field, $bit, $info->{accessor}, @_) };
       $i++;
     }
     
-    *{$column} = sub { shift->__bitfield($column, $info->{accessor}, \@fields, @_) };
+    *{$self.'::'.$column} = sub { shift->__bitfield($column, $info->{accessor}, \@fields, @_) };
   }
   
   
@@ -137,7 +137,7 @@ DBIx::Class::BitField - Store multiple boolean fields in one integer field
 
 =head1 VERSION
 
-version 0.11
+version 0.12
 
 =head1 SYNOPSIS
 

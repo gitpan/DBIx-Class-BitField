@@ -13,4 +13,5 @@ t/crud.t
 t/lib/Schema.pm
 t/load.t
 t/search.t
+t/subclass.t
 t/unit.t

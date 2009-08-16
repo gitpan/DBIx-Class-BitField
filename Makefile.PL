@@ -9,7 +9,7 @@ WriteMakefile(
   NAME      => 'DBIx::Class::BitField',
   AUTHOR    => 'Moritz\ Onken\ \<onken\@netcubed\.de\>',
   ABSTRACT  => 'Store\ multiple\ boolean\ fields\ in\ one\ integer\ field',
-  VERSION   => '0.11',
+  VERSION   => '0.12',
   EXE_FILES => [ qw() ],
   (eval { ExtUtils::MakeMaker->VERSION(6.31) } ? (LICENSE => 'mit') : ()),
   PREREQ_PM    => {
