@@ -3,7 +3,7 @@ abstract: 'Store multiple boolean fields in one integer field'
 author:
   - 'Moritz Onken <onken@netcubed.de>'
 generated_by: 'Dist::Zilla::Plugin::MetaYAML version 1.092071'
-license: mit
+license: bsd
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: 1.4
@@ -12,9 +12,7 @@ requires:
   DBD::SQLite: 0
   DBIx::Class: 0.08107
   File::Find::Rule: 0
-  SQL::Translator: 0.09003
-  Test::More: 0.42
-  Test::Script: 0
+  Test::More: 0.92
 resources:
   repository: http://github.com/monken/DBIx-Class-BitField/tree
-version: 0.12
+version: 0.13

@@ -1,5 +1,5 @@
 package DBIx::Class::ResultSet::BitField;
-our $VERSION = '0.12';
+our $VERSION = '0.13';
 
 
 use strict;
@@ -81,7 +81,7 @@ DBIx::Class::ResultSet::BitField
 
 =head1 VERSION
 
-version 0.12
+version 0.13
 
 =head1 AUTHOR
 
@@ -93,7 +93,7 @@ This software is Copyright (c) 2009 by Moritz Onken.
 
 This is free software, licensed under:
 
-  The MIT (X11) License
+  The (three-clause) BSD License
 
 =cut 
 
